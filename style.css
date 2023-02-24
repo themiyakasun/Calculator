@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
   --clr-primary: #17191b;
+
   --clr-btn-01: #303136;
   --clr-btn-02: #005db2;
   --clr-btn-03: #1991ff;
   --clr-btn-04: #49555d;
+
+  --clr-font-01: #29a8ff;
+  --clr-font-02: #339dff;
+  --clr-font-03: #83888d;
+  --clr-font-04: #ffff;
+
+  --ff-primary: 'Roboto', sans-serif;
+
+  --fs-01: 48px;
+  --fs-02: 30px;
+  --fs-03: 20px;
 
 }
 
@@ -75,4 +89,93 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/*utility classes */
+
+.container {
+  width: min(100%, 400px);
+  margin-inline: auto;
+}
+
+.fs-01 {
+  font-size: var(--fs-01);
+}
+
+.fs-02 {
+  font-size: var(--fs-02);
+}
+
+.fs-03 {
+  font-size: var(--fs-03);
+}
+
+.even-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 76.5px);
+  gap: 10px;
+}
+
+/*main */
+.calculator-main {
+  background-color: var(--clr-primary);
+  height: 100vh;
+  color: var(--clr-font-03);
+  font-family: var(--ff-primary);
+  padding: 2rem;
+}
+
+.num-body {
+  height: 30vh;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+}
+
+.action p {
+  float: right;
+}
+
+.result {
+  float: right;
+  color: var(--clr-font-04);
+}
+
+button {
+  border: none;
+  border-radius: 25px;
+  background-color: var(--clr-btn-01);
+  color: var(--clr-font-01);
+  cursor: pointer;
+}
+
+.plus {
+  grid-row-start: -4;
+  grid-row-end: -2;
+  grid-column-start: 4;
+}
+
+.zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.ash {
+  background-color: var(--clr-btn-04);
+  color: var(--clr-font-03);
+}
+
+.blue {
+  background-color: var(--clr-btn-02);
+  color: var(--clr-font-03);
+}
+
+.light-blue {
+  background-color: var(--clr-btn-03);
+  color: var(--clr-font-04);
 }

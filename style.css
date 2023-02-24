@@ -131,22 +131,32 @@ svg {
   position: relative;
 }
 
-.content {
-  position: absolute;
-  bottom: 30%;
-  right: 0;
+.action input {
+  width: 100%;
+  text-align: right;
+  color: var(--clr-font-03);
 }
 
-.action p {
-  float: right;
+.result,
+.action {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.result {
-  float: right;
+.result input {
+  width: 100%;
+  text-align: right;
   color: var(--clr-font-04);
 }
 
-button {
+input[type="text"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+input[type="button"] {
   border: none;
   border-radius: 25px;
   background-color: var(--clr-btn-01);
@@ -165,17 +175,17 @@ button {
   grid-column-end: 3;
 }
 
-.ash {
+.even-columns .ash {
   background-color: var(--clr-btn-04);
   color: var(--clr-font-03);
 }
 
-.blue {
+.even-columns .blue {
   background-color: var(--clr-btn-02);
   color: var(--clr-font-03);
 }
 
-.light-blue {
+.even-columns .light-blue {
   background-color: var(--clr-btn-03);
   color: var(--clr-font-04);
 }

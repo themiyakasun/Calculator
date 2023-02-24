@@ -12,52 +12,52 @@
 </head>
 
 <body>
-  <div id="app"></div>
-  <script type="module" src="/main.js"></script>
-</body>
-
-<div class="container">
-  <div class="calculator-main">
-    <div class="num-body">
-      <div class="content">
-        <div class="action">
-          <p>200 <span>+</span> 2000</p>
-        </div>
-        <div class="result fs-01">
-          <h2>=<span>2000</span></h2>
-        </div>
-      </div>
+  <div class="container">
+    <div class="calculator-main">
+      <form action="">
+        <div class="num-body">
+          <div class="action">
+            <input type="text" name="action">
+          </div>
+          <div class="result fs-01">
+            <input type="text" value="" name="result">
+          </div>
+      </form>
     </div>
 
     <div class="button-container">
-      <div class="even-columns">
-        <button class="fs-03 ash">Ac</button>
-        <button class="fs-03 ash"><span class="material-symbols-outlined">
-            backspace
-          </span></button>
-        <button class="fs-03 blue">/</button>
-        <button class="fs-03 blue">*</button>
+      <form action="">
+        <div class="even-columns">
+          <input type="button" class="button fs-03 ash" value="AC">
+          <input type="button" class="button fs-03 ash" value="DE">
+          <input type="button" class="button fs-03 blue" value="/" onclick="action.value += '/'">
+          <input type="button" class="button fs-03 blue" value="*" onclick="action.value += '*'">
 
-        <button class="fs-03">7</button>
-        <button class="fs-03">8</button>
-        <button class="fs-03">9</button>
-        <button class="fs-03 blue">-</button>
+          <input type="button" value="7" onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="8" onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="9" onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="-" onclick="action.value += ''" class="button fs-03 blue">
 
-        <button class="fs-03">4</button>
-        <button class="fs-03">5</button>
-        <button class="fs-03">6</button>
-        <button class="fs-03 plus blue">+</button>
+          <input type="button" value="4" onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="5" onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="6" onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="+" onclick="action.value += ''" class="button fs-03 plus blue">
 
-        <button class="fs-03">1</button>
-        <button class="fs-03">2</button>
-        <button class="fs-03">3</button>
+          <input type="button" value="1" onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="2" onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="3" onclick="action.value += ''" class="button fs-03">
 
-        <button class="fs-03 zero">0</button>
-        <button class="fs-03">.</button>
-        <button class="fs-03 long-row light-blue">=</button>
-      </div>
+          <input type="button" value="0" onclick="action.value += ''" class="button fs-03 zero">
+          <input type="button" value="." onclick="action.value += ''" class="button fs-03">
+          <input type="button" value="=" onclick="action.value += ''" class="button fs-03 long-row light-blue">
+        </div>
+      </form>
     </div>
   </div>
-</div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
 
 </html>
